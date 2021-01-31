@@ -75,7 +75,7 @@ function sendEmail(){
   if(ename!=''&&email!=''&ephone!=''){
       if(isEmpty(cart)){
           $.post(
-            "core/mail.php",
+            "../app/core/mail.php",
             {
               "ename" : ename,
               "email" : email,
@@ -83,7 +83,12 @@ function sendEmail(){
               "cart"  : cart
             },
             function(data){
-              console.log(data)
+              if(data==1){
+                alert('thanks for order');
+              }
+              else{
+                alert('please, try again');
+              }
             }
           )
       }
