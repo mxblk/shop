@@ -27,8 +27,8 @@ $message .='sum'.$sum;
 $to = 'mxblkmx@gmail.com'.',';
 $to .=$_POST['email'];
 $spectext = '<!DOCTYPE HTML><html><head><title>Order</title></head><body>';
-$headers  = 'MIME-Version: 1.0' . "\f\n";
-$headers .= 'Content-type: text/html; charset=utf-8' . "\f\n";
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
 $m = mail($to, 'Your order', $spectext.$message.'</body></html>',$headers);
 
